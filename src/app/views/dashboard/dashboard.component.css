@@ -8,6 +8,9 @@ body{
     display: flex;
     flex-direction: column;
 }
+.other{
+    margin-top: 650px;
+}
 .intro{
     position: absolute;
     left: 95px;
