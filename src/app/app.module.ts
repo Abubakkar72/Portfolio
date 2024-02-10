@@ -7,6 +7,9 @@ import { HomeModule } from './views/home.module';
 import { AboutComponent } from './views/about/about.component';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { NavbarComponent } from './views/navbar/navbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,11 @@ import { NavbarComponent } from './views/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,9 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { ServiceComponent } from './service/service.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SubmittedComponent } from './submitted/submitted.component';
 
 
 @NgModule({
@@ -21,11 +24,15 @@ import { ContactComponent } from './contact/contact.component';
     CertificatesComponent,
     ServiceComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    SubmittedComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     NavbarComponent,
@@ -35,8 +42,9 @@ import { ContactComponent } from './contact/contact.component';
     CertificatesComponent,
     ServiceComponent,
     FooterComponent,
-    ContactComponent
-
+    ContactComponent,
+    LoginComponent,
+    SubmittedComponent
   ]
 })
 export class HomeModule { }
