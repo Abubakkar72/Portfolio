@@ -11,7 +11,7 @@
             </div>
             <div class="resume">
                 <h4><span>RESUME</span></h4>
-                <a href="" class="link" id="msg">View my resume</a>
+                <a href="https://aqua-carin-80.tiiny.site" target="_blank" class="link" id="msg">View my resume</a>
             </div>
         </div>
         <div class="contact_form">
@@ -20,17 +20,18 @@
                 <p>Let's work together to <br>build something great.</p>
             </div>
             <div class="form">
-              <form action="">
-                <input type="text" class="text-field w-input" maxlength="256" name="First Name" data-name="First Name" placeholder="First Name" type="text" id="First-Name" required>
+              <form [formGroup]="myForm">
+                <input type="text" class="text-field w-input" maxlength="256" name="First Name" data-name="First Name" placeholder="First Name" type="text" id="First-Name" formControlName="firstname" required>
 
-                <input type="text" class="text-field w-input" maxlength="256" name="Last Name" data-name="Last Name" placeholder="Last Name" type="text" id="Last-Name" required><br><br>
+                <input type="text" class="text-field w-input" maxlength="256" name="Last Name" data-name="Last Name" placeholder="Last Name" type="text" id="Last-Name" formControlName="lastname" required><br><br>
 
-                <input type="email" class="text-field-2 w-input" maxlength="256" name="Email Address" data-name="Email Address" placeholder="Email Address" type="email" id="Email Address" required><br><br>
-                <input type="tel" class="text-field-2 w-input" maxlength="256" name="Phone Number" data-name="Phone Number" placeholder="Phone Number" type="tel" id="Phone Number" required><br><br><br>
+                <input type="email" class="text-field-2 w-input" maxlength="256" name="Email Address" data-name="Email Address" placeholder="Email Address" type="email" id="Email Address" formControlName="email" required><br><br>
 
-                <textarea name="Message" id="Message" maxlength="5000" data-name="Message" placeholder="Message" class="text-area"></textarea><br><br>
+                <input type="tel" class="text-field-2 w-input" maxlength="256" name="Phone Number" data-name="Phone Number" placeholder="Phone Number" type="tel" id="Phone Number" formControlName="number" required><br><br><br>
 
-                <input type="submit" data-wait="Please wait..." class="button-2 w-button" value="GET IN TOUCH">
+                <textarea name="Message" id="Message" maxlength="5000" data-name="Message" placeholder="Message" class="text-area" formControlName="message"></textarea><br><br>
+
+                <input (click)="sendEmail()" routerLink="/submit" type="submit" data-wait="Please wait..." class="button-2 w-button" value="GET IN TOUCH">
               </form>
               
             </div>
