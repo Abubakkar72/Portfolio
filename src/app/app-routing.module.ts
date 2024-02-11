@@ -8,12 +8,12 @@ import { LoginComponent } from './views/login/login.component';
 import { SubmittedComponent } from './views/submitted/submitted.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/login', pathMatch: 'full' },
+  // { path: '',   redirectTo: '/login', pathMatch: 'full' },
   {path: 'home', component: DashboardComponent},
   {path: 'project', component: ProjectsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path: 'submit', component: SubmittedComponent}
 ];
 
